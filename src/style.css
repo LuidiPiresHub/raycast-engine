@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(30, 30, 50);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+main {
+  position: relative
+}
+
+.mapCanvas {
+  height: min(100dvw, 100dvh);
+  width: min(100dvw, 100dvh);
+  aspect-ratio: 1/1;
+}
+
+.miniMapWrapper {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  height: 30%;
+  width: 30%;
+  /* height: 60%; */
+  /* width: 60%; */
+}
+
+.minimapCanvas,
+.playerCanvas {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: absolute;
+}
