@@ -46,7 +46,7 @@ export const draw3DMap = () => {
     const color = Math.floor(255 * brightness)
 
     map3DCtx.fillStyle = `rgb(${color}, ${color}, ${color})`
-    map3DCtx.fillRect(x, centerWall, columnWidth, wallHeight)
+    map3DCtx.fillRect(Math.floor(x), centerWall, Math.ceil(columnWidth), wallHeight)
   }
 
 }
