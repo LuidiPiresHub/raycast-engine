@@ -17,7 +17,56 @@ body {
 }
 
 .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameWrapper {
   position: relative;
+}
+
+.menu {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: white;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  user-select: none;
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.menu.hidden {
+  opacity: 0;
+}
+
+.menuTitle {
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: 8px;
+}
+
+.menuSpan {
+  font-size: clamp(1rem, 2vw, 1.6rem);
+}
+
+.menuText {
+  color: #bbb;
+  font-size: 0.95rem;
+}
+
+.map3D {
+  background-color: black;
+  display: block;
+  aspect-ratio: 16 / 9;
+  width: min(100dvw, calc(100dvh * 16 / 9));
+  height: auto;
 }
 
 .minimapWrapper {
@@ -42,10 +91,3 @@ body {
   height: 100%;
 }
 
-.map3D {
-  background-color: black;
-  display: block;
-  aspect-ratio: 16 / 9;
-  width: min(100dvw, calc(100dvh * 16 / 9));
-  height: auto;
-}
